@@ -26,7 +26,7 @@ var (
 			"FRONTED-MEEK-OSSH",
 		},
 		TunnelWorkers:  6,
-		KuotaDataLimit: 4,
+		KuotaDataLimit: 2,
 		Authorizations: make([]string, 0),
 	}
 	DefaultKuotaData = &KuotaData{
