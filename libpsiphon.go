@@ -18,7 +18,7 @@ import (
 var (
 	Loop          = true
 	DefaultConfig = &Config{
-		CoreName: "psiphon-tunnel-core",
+		CoreName: "psiphon-tunnel-core.so",
 		Tunnel:   1,
 		Region:   "",
 		Protocols: []string{
@@ -26,7 +26,7 @@ var (
 			"FRONTED-MEEK-OSSH",
 		},
 		TunnelWorkers:  6,
-		KuotaDataLimit: 2,
+		KuotaDataLimit: 4,
 		Authorizations: make([]string, 0),
 	}
 	DefaultKuotaData = &KuotaData{
