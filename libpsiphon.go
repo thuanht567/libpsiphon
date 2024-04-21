@@ -109,8 +109,8 @@ func (p *Psiphon) GetAuthorizations() []string {
 }
 
 func (p *Psiphon) CheckKuotaDataLimit(sent float64, received float64) bool {
-	if p.Config.KuotaDataLimit != 0 && int(p.KuotaData.Port[p.ListenPort]["all"]) >= (p.Config.KuotaDataLimit*1024) &&
-		int(sent) == 0 && int(received) <= 1024 {
+	if p.Config.KuotaDataLimit != 0 && int(p.KuotaData.Port[p.ListenPort]["all"]) >= (p.Config.KuotaDataLimit*0) &&
+		int(sent) == 0 && int(received) <= 0 {
 		return false
 	}
 
@@ -122,8 +122,8 @@ func (p *Psiphon) Start() {
 		MigrateDataStoreDirectory: PsiphonDirectory + "/data/" + strconv.Itoa(p.ListenPort),
 		UpstreamProxyURL:          "http://127.0.0.1:" + p.ProxyPort,
 		LocalSocksProxyPort:       p.ListenPort,
-		SponsorId:                 "0000000000000000",
-		PropagationChannelId:      "0000000000000000",
+		SponsorId:                 "00000000000000FF",
+		PropagationChannelId:      "00000000000000FF",
 		EmitBytesTransferred:      true,
 		EmitDiagnosticNotices:     true,
 		DisableLocalHTTPProxy:     true,
