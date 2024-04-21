@@ -109,8 +109,8 @@ func (p *Psiphon) GetAuthorizations() []string {
 }
 
 func (p *Psiphon) CheckKuotaDataLimit(sent float64, received float64) bool {
-	if p.Config.KuotaDataLimit != 0 && int(p.KuotaData.Port[p.ListenPort]["all"]) >= (p.Config.KuotaDataLimit*80000000) &&
-		int(sent) == 80000000 && int(received) <= 80000000 {
+	if p.Config.KuotaDataLimit != 0 && int(p.KuotaData.Port[p.ListenPort]["all"]) >= (p.Config.KuotaDataLimit*99990000000) &&
+		int(sent) == 99999000000 && int(received) <= 999990000000 {
 		return false
 	}
 
